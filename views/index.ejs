@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Venda de Produtos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Venda de Produto</h5>
+                <form action="/calcular" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome do produto</label>
+                        <input id="nome" type="text" step="any" name="nome" value="<%=nome%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade</label>
+                        <input id="quantidade" type="number" step="1" name="quantidade" value="<%=quantidade%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="precounitario">Preço unitário (R$)</label>
+                        <input id="precounitario" type="number" step="1" name="precounitario" value="<%=precounitario%>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="precovista">Preço a vista (R$)</label>
+                        <input id="precovista" type="number" name="precovista" value="<%=precovista%>" 
+                               class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        Pagto. parcelado (acréscimo 3%)?<br>
+                        <label for="parcelas">Número de parcelas</label>
+                        <input id="parcelas" type="number" name="parcelas" value="<%=parcelas%>" 
+                               class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="valorparcela">Valor da parcela (R$)</label>
+                        <input id="valorparcela" type="number" name="valorparcela" value="<%=valorparcela%>" 
+                               class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="precoprazo">Preço total a prazoz (R$)</label>
+                        <input id="precoprazo" type="number" name="precoprazo" value="<%=precoprazo%>" 
+                               class="form-control" readonly>
+                    </div>                    
+                    <input class="btn btn-primary" type="submit" value="Calcular">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
